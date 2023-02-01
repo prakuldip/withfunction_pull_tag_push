@@ -19,7 +19,7 @@ stages {
             steps{
               imagePullTagPush(SRC_IMAGE,DEST_IMAGE,SRC_REGISTRY_CRED,DST_REGISTRY_CRED)
               sh "docker image rm '${SRC_IMAGE}' '${DEST_IMAGE}'"
-            }
+            }  /* defining and calling function is successful*/
         }
     }
     post { 
