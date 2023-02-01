@@ -25,7 +25,7 @@ stages {
         }
     }
 }
-def imagePullTagPush(string SRC_IMAGE, string DEST_IMAGE) {
+def imagePullTagPush(String SRC_IMAGE, String DEST_IMAGE) {
     //def image_to_pull = docker.image("${registryURI}${dev_registry}:${imageTag}")
     def image_to_pull = docker.image(SRC_IMAGE)
     docker.withRegistry("https://${registryURI}",registryCredential){
